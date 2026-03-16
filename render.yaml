@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: pakar-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_API_ID
+        sync: false
+      - key: TELEGRAM_API_HASH
+        sync: false
+      - key: TELEGRAM_SESSION
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: TARGET_CHANNEL
+        sync: false
